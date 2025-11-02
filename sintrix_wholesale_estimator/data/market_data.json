@@ -1,0 +1,147 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/sintrix_wholesale_estimator/data/market_data.json b/sintrix_wholesale_estimator/data/market_data.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..419f33d01e1cb35c71a779464bc90163c5c59d7c
+--- /dev/null
++++ b/sintrix_wholesale_estimator/data/market_data.json
+@@ -0,0 +1,137 @@
++{
++  "Austin, TX": {
++    "price_per_sqft_turnkey": 285.0,
++    "condition_adjustment": {
++      "turnkey": 1.0,
++      "rent_ready": 0.93,
++      "light_rehab": 0.82,
++      "heavy_rehab": 0.68,
++      "tear_down": 0.45
++    },
++    "property_type_adjustment": {
++      "single_family": 1.0,
++      "multi_family": 0.97,
++      "condo": 0.88,
++      "townhome": 0.92
++    },
++    "renovation_cost_per_sqft": {
++      "rent_ready": 8.0,
++      "light_rehab": 32.0,
++      "heavy_rehab": 54.0,
++      "tear_down": 140.0
++    },
++    "closing_cost_rate": 0.032,
++    "holding_cost_rate": 0.011,
++    "wholesale_fee_rate": 0.065,
++    "holding_months": 4.0,
++    "demand_index": 1.06
++  },
++  "Atlanta, GA": {
++    "price_per_sqft_turnkey": 210.0,
++    "condition_adjustment": {
++      "turnkey": 1.0,
++      "rent_ready": 0.92,
++      "light_rehab": 0.78,
++      "heavy_rehab": 0.62,
++      "tear_down": 0.4
++    },
++    "property_type_adjustment": {
++      "single_family": 1.0,
++      "multi_family": 1.05,
++      "condo": 0.81,
++      "townhome": 0.9
++    },
++    "renovation_cost_per_sqft": {
++      "rent_ready": 6.0,
++      "light_rehab": 28.0,
++      "heavy_rehab": 48.0,
++      "tear_down": 132.0
++    },
++    "closing_cost_rate": 0.029,
++    "holding_cost_rate": 0.013,
++    "wholesale_fee_rate": 0.07,
++    "holding_months": 3.5,
++    "demand_index": 0.97
++  },
++  "Phoenix, AZ": {
++    "price_per_sqft_turnkey": 240.0,
++    "condition_adjustment": {
++      "turnkey": 1.0,
++      "rent_ready": 0.9,
++      "light_rehab": 0.76,
++      "heavy_rehab": 0.6,
++      "tear_down": 0.42
++    },
++    "property_type_adjustment": {
++      "single_family": 1.0,
++      "multi_family": 1.03,
++      "condo": 0.85,
++      "townhome": 0.88
++    },
++    "renovation_cost_per_sqft": {
++      "rent_ready": 7.0,
++      "light_rehab": 30.0,
++      "heavy_rehab": 52.0,
++      "tear_down": 138.0
++    },
++    "closing_cost_rate": 0.031,
++    "holding_cost_rate": 0.012,
++    "wholesale_fee_rate": 0.068,
++    "holding_months": 3.0,
++    "demand_index": 1.01
++  },
++  "Cleveland, OH": {
++    "price_per_sqft_turnkey": 155.0,
++    "condition_adjustment": {
++      "turnkey": 1.0,
++      "rent_ready": 0.89,
++      "light_rehab": 0.72,
++      "heavy_rehab": 0.55,
++      "tear_down": 0.36
++    },
++    "property_type_adjustment": {
++      "single_family": 1.0,
++      "multi_family": 1.08,
++      "condo": 0.78,
++      "townhome": 0.84
++    },
++    "renovation_cost_per_sqft": {
++      "rent_ready": 5.0,
++      "light_rehab": 24.0,
++      "heavy_rehab": 45.0,
++      "tear_down": 120.0
++    },
++    "closing_cost_rate": 0.027,
++    "holding_cost_rate": 0.015,
++    "wholesale_fee_rate": 0.075,
++    "holding_months": 5.0,
++    "demand_index": 0.88
++  },
++  "Tampa, FL": {
++    "price_per_sqft_turnkey": 265.0,
++    "condition_adjustment": {
++      "turnkey": 1.0,
++      "rent_ready": 0.91,
++      "light_rehab": 0.79,
++      "heavy_rehab": 0.63,
++      "tear_down": 0.43
++    },
++    "property_type_adjustment": {
++      "single_family": 1.0,
++      "multi_family": 0.99,
++      "condo": 0.87,
++      "townhome": 0.9
++    },
++    "renovation_cost_per_sqft": {
++      "rent_ready": 7.5,
++      "light_rehab": 31.0,
++      "heavy_rehab": 53.0,
++      "tear_down": 135.0
++    },
++    "closing_cost_rate": 0.03,
++    "holding_cost_rate": 0.012,
++    "wholesale_fee_rate": 0.069,
++    "holding_months": 4.2,
++    "demand_index": 1.03
++  }
++}
+ 
+EOF
+)
